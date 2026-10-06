@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Pão do Lar · Panificadora e Confeitaria · 40 anos em Gaspar/SC</title>
+<meta name="description" content="Panificadora e Confeitaria Pão do Lar, desde 1986 no bairro Sete de Setembro, em Gaspar/SC. Tortas, cucas, salgados e café. Abre às 6h15. Encomendas pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bordo:#7A1F2B;--bordo2:#5E1520;--azul:#2E5C8A;--turq:#3FB8C0;--creme:#FBF3E6;--caramelo:#C7853F;--cacau:#2B1A14}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--cacau);background:var(--creme);line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+.demo{background:var(--cacau);color:var(--creme);text-align:center;font-size:.8rem;padding:.45rem 1rem}
+.gl{font-family:'Gloock',serif;font-weight:400}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.25rem}
+/* azulejo em CSS */
+.azulejo{background-color:#fff;background-image:
+ radial-gradient(circle at 50% 50%,var(--azul) 0 9px,transparent 10px),
+ radial-gradient(circle at 0 0,var(--azul) 0 14px,transparent 15px),
+ radial-gradient(circle at 100% 0,var(--azul) 0 14px,transparent 15px),
+ radial-gradient(circle at 0 100%,var(--azul) 0 14px,transparent 15px),
+ radial-gradient(circle at 100% 100%,var(--azul) 0 14px,transparent 15px),
+ linear-gradient(45deg,transparent 46%,rgba(46,92,138,.55) 47% 53%,transparent 54%),
+ linear-gradient(-45deg,transparent 46%,rgba(46,92,138,.55) 47% 53%,transparent 54%);
+ background-size:56px 56px}
+/* topo */
+.top{background:var(--bordo);color:var(--creme)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:72px}
+.logo{font-family:'Gloock';font-size:1.7rem;text-decoration:none;line-height:1}
+.logo small{display:block;font-family:'Outfit';font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;opacity:.85;margin-top:.2rem}
+.top nav{display:flex;gap:1.6rem;font-weight:500}
+.top nav a{text-decoration:none;opacity:.9}
+.top nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.open{display:inline-flex;align-items:center;gap:.45rem;font-size:.85rem;background:rgba(255,255,255,.12);padding:.35rem .8rem;border-radius:999px}
+.open i{width:9px;height:9px;border-radius:50%;background:#5BD08A}
+.open.off i{background:#F08A7E}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none;font-weight:600;padding:.85rem 1.4rem;border-radius:12px;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.zap{background:var(--azul);color:#fff}
+.btn.zap:hover{background:#244a70}
+.btn.line{border:2px solid var(--bordo);color:var(--bordo)}
+.btn.cream{background:var(--creme);color:var(--bordo)}
+.btn svg{width:18px;height:18px;fill:currentColor}
+/* hero */
+.hero{padding:3.5rem 0 4rem;background:var(--bordo);color:var(--creme)}
+.hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:3.5rem;align-items:center}
+.eyebrow{display:inline-block;color:var(--bordo);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;border-bottom:2px solid var(--caramelo);padding-bottom:.2rem}
+.hero h1{font-family:'Gloock';font-weight:400;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1.02;margin:1rem 0 1.2rem;color:var(--creme)}
+.hero h1 span{color:#F2C79A}
+.hero .eyebrow{color:#F2C79A}
+.hero .btn.line{border-color:var(--creme);color:var(--creme)}
+.hero .btn.zap{background:var(--creme);color:var(--bordo)}
+.top{border-bottom:1px solid rgba(251,243,230,.15)}
+.hero p{font-size:1.12rem;max-width:40ch;margin-bottom:1.6rem}
+.hero .btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.frame{position:relative;padding:22px;border-radius:6px}
+.frame img{width:100%;height:520px;object-fit:cover;border:6px solid #fff;box-shadow:0 18px 40px rgba(43,26,20,.25)}
+.carimbo{position:absolute;left:-28px;bottom:-30px;width:150px;height:150px;border-radius:50%;background:var(--azul);color:var(--creme);display:grid;place-items:center;text-align:center;border:4px double var(--creme);outline:3px solid var(--azul);transform:rotate(-10deg);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.carimbo b{font-family:'Gloock';font-size:3.2rem;line-height:.9;display:block}
+.carimbo span{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase}
+/* faixa horário */
+.horas{background:var(--azul);color:#fff}
+.horas .wrap{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:2rem;align-items:center;padding-top:1.4rem;padding-bottom:1.4rem}
+.horas .big{font-family:'Gloock';font-size:2.2rem;line-height:1}
+.horas div small{display:block;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;opacity:.8}
+.horas div b{font-size:1.15rem;font-weight:600}
+section{padding:5rem 0}
+.title{text-align:center;margin-bottom:2.8rem}
+.title h2{font-family:'Gloock';font-weight:400;font-size:clamp(2.2rem,4.4vw,3.4rem);line-height:1.05;color:var(--bordo)}
+.title p{max-width:52ch;margin:.7rem auto 0;color:#5a463d}
+.title .orn{display:block;width:90px;height:14px;margin:0 auto .8rem;background:radial-gradient(circle,var(--caramelo) 0 4px,transparent 5px) 0 0/22px 14px repeat-x}
+/* vitrine */
+.vitrine{background:var(--creme);position:relative;border-top:14px solid var(--azul)}
+
+.shelf{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.prod{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 0 var(--azul);border:1px solid #e3d3bd}
+.prod .ph{height:340px;overflow:hidden}
+.prod .ph img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.prod .b{padding:1.3rem 1.3rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.prod h3{font-family:'Gloock';font-weight:400;font-size:1.6rem;line-height:1.1}
+.flav{display:flex;flex-wrap:wrap;gap:.45rem}
+.flav a{font-size:.88rem;font-weight:600;text-decoration:none;border:1.5px solid var(--azul);color:var(--azul);padding:.35rem .75rem;border-radius:999px;transition:.15s}
+.flav a:hover{background:var(--azul);color:#fff}
+.etiqueta{margin-top:auto;font-size:.82rem;color:#6b5346;border-top:1px dashed #cdb9a3;padding-top:.7rem}
+.vit-note{color:#6b5346;text-align:center;margin-top:2.4rem;opacity:.9}
+/* balcão */
+.balcao{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:1rem;grid-auto-flow:dense}
+.balcao figure{position:relative;border-radius:14px;overflow:hidden}
+.balcao img{width:100%;height:100%;object-fit:cover}
+.balcao figure.t{grid-row:span 2}
+.balcao figure.w{grid-column:span 2}
+.balcao figcaption{position:absolute;left:.7rem;bottom:.7rem;right:.7rem;background:rgba(251,243,230,.95);border-radius:10px;padding:.45rem .7rem;font-size:.85rem}
+.balcao figcaption b{font-family:'Gloock';font-weight:400;font-size:1.05rem;display:block;color:var(--bordo)}
+/* 40 anos */
+.anos{background:var(--creme)}
+.anos .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center}
+.tile-box{padding:18px;border-radius:8px}
+.tile-box img{width:100%;height:460px;object-fit:cover;border:6px solid #fff}
+.tl{list-style:none;position:relative}
+.tl li{display:grid;grid-template-columns:120px 1fr;gap:1.2rem;padding:1.1rem 0;border-bottom:1px solid #e3d3bd}
+.tl .y{font-family:'Gloock';font-size:2rem;color:var(--azul);line-height:1}
+.tl h3{font-size:1.1rem;font-weight:600}
+.quote{margin-top:1.8rem;background:#fff;border-left:5px solid var(--caramelo);padding:1.2rem 1.4rem;border-radius:0 12px 12px 0}
+.quote blockquote{font-family:'Gloock';font-size:1.25rem;line-height:1.35;color:var(--bordo)}
+.quote cite{display:block;font-style:normal;font-size:.82rem;margin-top:.6rem;color:#6b5346}
+/* loja */
+.loja{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1rem;align-items:stretch}
+.loja img{width:100%;height:340px;object-fit:cover;border-radius:14px}
+.loja-info{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.6rem}
+.loja-info span{background:#fff;border:1px solid #e3d3bd;border-radius:999px;padding:.4rem 1rem;font-weight:500}
+/* avaliações */
+.aval{background:#fff}
+.aval .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:start}
+.nota b{font-family:'Gloock';font-size:5rem;line-height:1;color:var(--bordo)}
+.temas{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.temas span{background:var(--creme);border:1px solid #e3d3bd;border-radius:8px;padding:.35rem .7rem;font-size:.9rem}
+.nota .temas span b{color:var(--azul);font-family:inherit;font-size:inherit;line-height:inherit;font-weight:700}
+.cards{display:grid;gap:1rem}
+.cards figure{background:var(--creme);border-radius:14px;padding:1.3rem 1.4rem;position:relative}
+.cards blockquote{font-size:1.05rem}
+.cards figcaption{font-size:.85rem;font-weight:600;color:var(--bordo);margin-top:.5rem}
+/* contato */
+.contato{background:var(--bordo);color:var(--creme)}
+.contato .grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.contato h2{font-family:'Gloock';font-weight:400;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1.05}
+.contato ul{list-style:none;margin:1.4rem 0 1.8rem}
+.contato li{padding:.6rem 0;border-bottom:1px solid rgba(251,243,230,.2)}
+.contato li b{display:inline-block;min-width:110px;color:#F2C79A;font-weight:500}
+.contato img{border-radius:14px;height:440px;width:100%;object-fit:cover;object-position:center 30%;border:6px solid var(--creme)}
+footer{background:var(--cacau);color:#d8c8b8;font-size:.85rem;padding:1.6rem 0}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fixa{display:none}
+@media (max-width:900px){
+ .top nav{display:none}
+ .top .open{display:none}
+ .hero .grid,.anos .grid,.aval .grid,.contato .grid{grid-template-columns:1fr}
+ .frame img{height:380px}
+ .carimbo{width:112px;height:112px;left:-6px;bottom:-22px}
+ .carimbo b{font-size:2.3rem}
+ .horas .wrap{grid-template-columns:1fr 1fr;gap:1rem}
+ .horas .big{grid-column:span 2}
+ .shelf{grid-template-columns:1fr}
+ .balcao{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+ .balcao figure.w{grid-column:span 2}
+ .loja{grid-template-columns:1fr}
+ .loja img{height:240px}
+ .tl li{grid-template-columns:90px 1fr}
+ .tile-box img{height:320px}
+ section{padding:3.8rem 0}
+ .fixa{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:50}
+ .fixa a{padding:1rem;text-align:center;font-weight:600;text-decoration:none;color:#fff}
+ .fixa a:first-child{background:var(--azul)}.fixa a:last-child{background:var(--bordo)}
+ body{padding-bottom:56px}
+}
+/* ===== Movimento (WolfStudio v3) — só roda com JS e sem "reduzir movimento" ===== */
+:root{--e:cubic-bezier(.2,.7,.2,1)}
+.anim :is(.horas .wrap>div,.title,.prod,.vit-note,.balcao figure,.anos .grid>*,.loja img,.loja-info span,.nota,.cards figure,.contato .grid>*){transition:opacity .7s var(--e) var(--d,0ms),translate .8s var(--e) var(--d,0ms),scale .8s var(--e) var(--d,0ms),rotate .8s var(--e) var(--d,0ms),transform .35s var(--e),box-shadow .35s,border-color .25s,background-color .25s}
+.anim :is(.horas .wrap>div,.title,.prod,.vit-note,.balcao figure,.anos .grid>*,.loja img,.loja-info span,.nota,.cards figure,.contato .grid>*):not(.in){opacity:0;translate:var(--tx,0px) var(--ty,22px);scale:var(--sc,1)}
+@keyframes sobe{from{opacity:0;translate:0 18px}}
+@keyframes gira{to{rotate:360deg}}
+@media print{.anim *{opacity:1!important;translate:none!important;scale:none!important;clip-path:none!important}}
+[id]{scroll-margin-top:10px}
+/* menu e status */
+.top nav a{transition:opacity .2s}
+.top nav a.on{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.open:not(.off) i{animation:pulso 2.4s ease-out infinite}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(91,208,138,.6)}70%,100%{box-shadow:0 0 0 8px rgba(91,208,138,0)}}
+.btn:active{transform:translateY(0) scale(.98)}
+/* hero: texto sobe, a foto no azulejo encaixa e o selo de 40 anos "carimba" */
+.hero .grid>div:first-child>*{animation:sobe .8s var(--e) both}
+.hero .grid>div:first-child>:nth-child(2){animation-delay:.1s}.hero .grid>div:first-child>:nth-child(3){animation-delay:.2s}.hero .grid>div:first-child>:nth-child(4){animation-delay:.3s}
+.frame{animation:quadro 1s var(--e) .2s both}
+@keyframes quadro{from{opacity:0;scale:.95;rotate:1.5deg}}
+.carimbo{animation:carimba .55s cubic-bezier(.3,1.4,.5,1) 1s both;transition:rotate .5s var(--e)}
+@keyframes carimba{from{opacity:0;scale:1.9}}
+.frame:hover .carimbo{rotate:8deg}
+.carimbo b{font-variant-numeric:tabular-nums}
+/* títulos: o enfeite de bolinhas abre do centro */
+.title .orn{transition:scale .9s var(--e) calc(var(--d,0ms) + .2s)}
+.anim .title:not(.in) .orn{scale:0 1}
+/* vitrine: a prateleira "levanta" no hover */
+.prod:hover{transform:translateY(-6px);box-shadow:0 16px 0 var(--azul)}
+.prod .ph img{transition:scale 1s var(--e)}
+.prod:hover .ph img{scale:1.05}
+.flav a:hover{transform:translateY(-2px)}
+.anim .prod{--ty:30px}
+/* balcão */
+.balcao img{transition:scale 1s var(--e)}
+.balcao figure:hover img{scale:1.06}
+.balcao figcaption{transition:translate .35s var(--e)}
+.balcao figure:hover figcaption{translate:0 -4px}
+.anim .balcao figure{--sc:.94;--ty:0px}
+/* 40 anos: a linha do tempo entra ano a ano */
+.tl li{transition:opacity .6s var(--e) calc(.3s + var(--k,0)*.16s),translate .6s var(--e) calc(.3s + var(--k,0)*.16s)}
+.anim .anos .grid>div:not(.in) .tl li{opacity:0;translate:0 12px}
+.tl li:nth-child(2){--k:1}.tl li:nth-child(3){--k:2}
+/* loja e avaliações */
+.loja img:hover{transform:scale(1.015)}
+.anim .loja-info span{--sc:.8;--ty:0px}
+.nota>b{font-variant-numeric:tabular-nums}
+.temas span{transition:opacity .4s calc(.3s + var(--k,0)*.07s),scale .4s cubic-bezier(.3,1.5,.5,1) calc(.3s + var(--k,0)*.07s)}
+.anim .nota:not(.in) .temas span{opacity:0;scale:.7}
+.temas span:nth-child(2){--k:1}.temas span:nth-child(3){--k:2}.temas span:nth-child(4){--k:3}.temas span:nth-child(5){--k:4}.temas span:nth-child(6){--k:5}.temas span:nth-child(7){--k:6}
+.cards figure:hover{transform:translateY(-3px);box-shadow:0 14px 22px -18px rgba(43,26,20,.6)}
+/* barra fixa do celular */
+.fixa{animation:sobe-barra .6s var(--e) .9s both}
+@keyframes sobe-barra{from{translate:0 110%}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script>(function(d){if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches)d.classList.add('anim')})(document.documentElement)</script>
+</head>
+<body>
+<div class="demo" role="note">Demonstração WolfStudio — não é o site oficial.</div>
+
+<header class="top"><div class="wrap">
+ <a class="logo" href="#">Pão do Lar<small>Panificadora e Confeitaria</small></a>
+ <nav><a href="#vitrine">Tortas</a><a href="#balcao">Do balcão</a><a href="#anos">40 anos</a><a href="#contato">Onde fica</a></nav>
+ <span class="open" id="open"><i></i><span id="openTxt">—</span></span>
+</div></header>
+
+<main>
+<section class="hero" style="padding-top:3.5rem">
+ <div class="wrap grid">
+  <div>
+   <span class="eyebrow">Gaspar · desde 1986</span>
+   <h1>40 anos de café, cuca e <span>torta</span> no Sete de Setembro.</h1>
+   <p>Padaria e confeitaria de família, com pão fresquinho às 6h15, vitrine cheia de doces e salgados, e tortas para encomendar.</p>
+   <div class="btns">
+    <a class="btn zap" href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20uma%20torta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>Encomendar pelo WhatsApp</a>
+    <a class="btn line" href="tel:+554733322571">Ligar (47) 3332-2571</a>
+   </div>
+  </div>
+  <div class="frame azulejo">
+   <img src="assets/vitrine-bolos.jpg" alt="Vitrine refrigerada da Pão do Lar com bolos e tortas">
+   <div class="carimbo"><div><b>40</b><span>anos<br>1986 · 2026</span></div></div>
+  </div>
+ </div>
+</section>
+
+<div class="horas"><div class="wrap">
+ <div class="big">Abre às 6h15</div>
+ <div><small>Segunda a sexta</small><b>6h15 às 20h</b></div>
+ <div><small>Sábado</small><b>6h15 às 18h</b></div>
+ <div><small>Domingo</small><b>Fechado</b></div>
+</div></div>
+
+<section id="vitrine" class="vitrine">
+ <div class="wrap">
+  <div class="title"><span class="orn"></span><h2>A vitrine de tortas</h2><p>Escolha o sabor e toque no nome: o WhatsApp já abre com o pedido escrito.</p></div>
+  <div class="shelf">
+   <article class="prod">
+    <div class="ph"><img src="assets/tortas-pistache-rafaello-nutella.jpg" alt="Fatias de torta de pistache, rafaello e nutella"></div>
+    <div class="b"><h3>Cremosas</h3>
+     <div class="flav">
+      <a href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20torta%20de%20Pistache." target="_blank" rel="noopener">Pistache</a>
+      <a href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20torta%20Rafaello." target="_blank" rel="noopener">Rafaello</a>
+      <a href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20torta%20de%20Nutella." target="_blank" rel="noopener">Nutella</a>
+     </div>
+     <p class="etiqueta">Tamanhos, preço e prazo: pelo WhatsApp.</p></div>
+   </article>
+   <article class="prod">
+    <div class="ph"><img src="assets/tortas-maracuja-morango-limao.jpg" alt="Fatias de torta de maracujá, trufada de morango e limão"></div>
+    <div class="b"><h3>Frutadas</h3>
+     <div class="flav">
+      <a href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20torta%20de%20Maracuj%C3%A1." target="_blank" rel="noopener">Maracujá</a>
+      <a href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20torta%20Trufada%20de%20Morango." target="_blank" rel="noopener">Trufada de Morango</a>
+      <a href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20torta%20de%20Lim%C3%A3o." target="_blank" rel="noopener">Limão</a>
+     </div>
+     <p class="etiqueta">Tamanhos, preço e prazo: pelo WhatsApp.</p></div>
+   </article>
+   <article class="prod">
+    <div class="ph"><img src="assets/bolo-de-chocolate.jpg" alt="Bolo de chocolate com cobertura"></div>
+    <div class="b"><h3>Bolos</h3>
+     <div class="flav">
+      <a href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20o%20Bolo%20de%20Chocolate." target="_blank" rel="noopener">Bolo de Chocolate</a>
+      <a href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20um%20bolo%20decorado." target="_blank" rel="noopener">Bolo decorado</a>
+     </div>
+     <p class="etiqueta">Tamanhos, preço e prazo: pelo WhatsApp.</p></div>
+   </article>
+  </div>
+  <p class="vit-note">Sabores mostrados nas artes da própria Pão do Lar. A vitrine da loja muda com frequência.</p>
+ </div>
+</section>
+
+<section id="balcao">
+ <div class="wrap">
+  <div class="title"><span class="orn"></span><h2>Direto do balcão</h2><p>Café é o assunto mais citado nas avaliações do Google, seguido dos salgados, do ambiente e dos doces.</p></div>
+  <div class="balcao">
+   <figure class="t"><img src="assets/cafe-com-leite-logo.jpg" alt="Café com leite sendo servido na xícara"><figcaption><b>Café com leite</b>“coisa de outro mundo”, diz uma cliente</figcaption></figure>
+   <figure class="w"><img src="assets/vitrine-salgados.jpg" alt="Vitrine aquecida com salgados"><figcaption><b>Salgados</b>na vitrine aquecida</figcaption></figure>
+   <figure><img src="assets/cappuccino-bom-dia.jpg" alt="Café com 'Bom dia' desenhado na espuma"><figcaption><b>Bom dia</b>escrito na espuma</figcaption></figure>
+   <figure class="t"><img src="assets/fatia-red-velvet.jpg" alt="Fatia de bolo red velvet com morango"><figcaption><b>Doces em fatia</b>red velvet e mais</figcaption></figure>
+   <figure class="w"><img src="assets/cucas-bandeja.jpg" alt="Bandejas de cuca na vitrine"><figcaption><b>Cucas</b>em bandeja</figcaption></figure>
+   <figure><img src="assets/fatia-floresta-negra.jpg" alt="Fatia de torta de chocolate com chantilly e cereja"><figcaption><b>Torta de chocolate</b>com chantilly</figcaption></figure>
+   <figure><img src="assets/tortinhas-prato.jpg" alt="Prato com tortinhas e docinhos"><figcaption><b>Tortinhas</b>para o café</figcaption></figure>
+   <figure><img src="assets/portal-bolo-morango.jpg" alt="Bolo com morangos por cima"><figcaption><b>Bolo com morangos</b>da confeitaria</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="anos" class="anos" style="padding-top:1rem">
+ <div class="wrap grid">
+  <div class="tile-box azulejo"><img src="assets/fachada-predio.jpg" alt="Prédio da Pão do Lar com o letreiro, visto da rua"></div>
+  <div>
+   <span class="eyebrow">Nossa história</span>
+   <h2 class="gl" style="font-size:clamp(2.2rem,4.4vw,3.4rem);line-height:1.05;color:var(--bordo);margin:.8rem 0 1rem">Uma história de família que já passa de geração.</h2>
+   <ol class="tl">
+    <li><span class="y">1986</span><div><h3>Abre a Pão do Lar</h3><p>Começa a história da padaria, na época do “vô”.</p></div></li>
+    <li><span class="y">há 15 anos</span><div><h3>Anderson e Eliane assumem</h3><p>O casal, que já trabalhava na padaria, passa a comandar a casa.</p></div></li>
+    <li><span class="y">2026</span><div><h3>40 anos</h3><p>Comemorados em setembro, com atrações para os clientes.</p></div></li>
+   </ol>
+   <div class="quote"><blockquote>“Você não recebeu apenas uma empresa. Você recebeu uma história.”</blockquote><cite>Sthefany Sassemann, filha dos proprietários, em homenagem publicada nos 40 anos (Jornal Metas, 13/09/2026)</cite></div>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:1rem">
+ <div class="wrap">
+  <div class="title"><span class="orn"></span><h2>Venha tomar um café</h2></div>
+  <div class="loja">
+   <img src="assets/salao-balcao.jpg" alt="Salão da padaria com balcão, vitrines e luz azul no teto">
+   <img src="assets/salao-mesas.jpg" alt="Mesas para café com sofá bordô">
+   <img src="assets/vitrine-doces.jpg" alt="Vitrine de doces finos e tortas">
+  </div>
+  <div class="loja-info"><span>❄ Ambiente climatizado</span><span>🚗 Estacionamento</span><span>☕ Mesas para café</span><span>🎂 Encomendas</span></div>
+ </div>
+</section>
+
+<section class="aval">
+ <div class="wrap grid">
+  <div class="nota"><b>4,7 ★</b><p><strong>863 avaliações no Google</strong></p>
+   <div class="temas"><span>café <b>34</b></span><span>salgados <b>13</b></span><span>ambiente <b>12</b></span><span>doces <b>7</b></span><span>cuca <b>6</b></span><span>buffet <b>6</b></span><span>atendimento <b>6</b></span></div>
+   <p style="font-size:.82rem;color:#6b5346;margin-top:.8rem">Número de avaliações que citam cada assunto (Google).</p>
+  </div>
+  <div class="cards">
+   <figure><blockquote>“Uma variedade absurda de bolos, doces e salgados tudo muito delicioso e fresquinho. Super recomendo”</blockquote><figcaption>João Carlos do Nascimento · Google</figcaption></figure>
+   <figure><blockquote>“Sem falar do delicioso café com leite, coisa de outro mundo e o delicioso pão de queijo com ervas”</blockquote><figcaption>Krys Dias · Google</figcaption></figure>
+   <figure><blockquote>“Ótima opção para degustar doces, salgados, sem contar o delicioso café.”</blockquote><figcaption>André Rafael Muniz · Google</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="contato" class="contato">
+ <div class="wrap grid">
+  <div>
+   <h2>Rua Sete de Setembro, 145</h2>
+   <ul>
+    <li><b>Bairro</b>Sete de Setembro · Gaspar/SC</li>
+    <li><b>Telefone</b>(47) 3332-2571</li>
+    <li><b>Horário</b>Seg a sex 6h15–20h · Sáb 6h15–18h</li>
+    <li><b>Instagram</b>@paodolargaspar</li>
+   </ul>
+   <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+    <a class="btn cream" href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda." target="_blank" rel="noopener">Encomendar pelo WhatsApp</a>
+    <a class="btn" style="border:2px solid var(--creme);color:var(--creme)" href="https://www.google.com/maps?cid=17538711556042638412" target="_blank" rel="noopener">Ver no mapa</a>
+   </div>
+  </div>
+  <img src="assets/fachada-loja.jpg" alt="Fachada da loja com o letreiro Pão do Lar">
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><p>Panificadora e Confeitaria Pão do Lar · Gaspar/SC</p><p>Demonstração feita pela WolfStudio. Não é o site oficial da Pão do Lar. Fotos públicas do Google Maps, do portal de turismo de Gaspar e da página do Facebook da Pão do Lar, usadas só nesta demonstração.</p></div></footer>
+<div class="fixa"><a href="https://wa.me/554733322571?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20encomenda." target="_blank" rel="noopener">WhatsApp</a><a href="tel:+554733322571">Ligar</a></div>
+
+<script>
+(function(){
+ const d=new Date(),wd=d.getDay(),h=d.getHours()+d.getMinutes()/60;
+ const s={0:null,1:[6.25,20],2:[6.25,20],3:[6.25,20],4:[6.25,20],5:[6.25,20],6:[6.25,18]}[wd];
+ const el=document.getElementById('open'),t=document.getElementById('openTxt');
+ if(s&&h>=s[0]&&h<s[1]){t.textContent='Aberto agora · até '+s[1]+'h';}
+ else{el.classList.add('off');t.textContent=(wd===6&&h>=18)||wd===0?'Fechado · abre segunda às 6h15':'Fechado · abre às 6h15';}
+})();
+</script>
+<script>
+/* Movimento (WolfStudio v3): revelar ao rolar, contadores e menu ativo. */
+(function(){
+  var R=document.documentElement; if(!R.classList.contains('anim')) return;
+  try{
+    var SEL='.horas .wrap>div,.title,.prod,.vit-note,.balcao figure,.anos .grid>*,.loja img,.loja-info span,.nota,.cards figure,.contato .grid>*', CNT='.nota>b';
+    var io=new IntersectionObserver(function(es){
+      var n=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el=e.target; io.unobserve(el);
+        if(n) el.style.setProperty('--d',Math.min(n,7)*90+'ms');
+        n++; el.classList.add('in');
+        setTimeout(function(){el.style.removeProperty('--d')},1700);
+      });
+    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    var pend=[].slice.call(document.querySelectorAll(SEL));
+    pend.forEach(function(el){io.observe(el)});
+    /* rolagem rápida pode pular um bloco: o que já ficou para cima aparece sem esperar */
+    var tv=0;
+    function varre(){pend=pend.filter(function(el){
+      if(el.classList.contains('in')) return false;
+      if(el.getBoundingClientRect().bottom<0){io.unobserve(el);el.classList.add('in');return false}
+      return true;
+    })}
+
+    function conta(el){
+      var tn=null;
+      [].some.call(el.childNodes,function(c){if(c.nodeType===3&&/\d,\d/.test(c.nodeValue)){tn=c;return true}});
+      if(!tn) return;
+      var full=tn.nodeValue, m=full.match(/(\d+),(\d)/), alvo=parseFloat(m[1]+'.'+m[2]), t0=null;
+      function f(t){
+        if(!t0) t0=t;
+        var p=Math.min(1,(t-t0)/1100), v=alvo*(1-Math.pow(1-p,3));
+        tn.nodeValue=p<1?full.replace(m[0],v.toFixed(1).replace('.',',')):full;
+        if(p<1) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    }
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cio.unobserve(e.target);conta(e.target)}})},{threshold:.6});
+    [].forEach.call(document.querySelectorAll(CNT),function(el){cio.observe(el)});
+
+    var links=[].slice.call(document.querySelectorAll('nav a[href^="#"]')), mapa={};
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      links.forEach(function(a){a.classList.remove('on')}); mapa[e.target.id].classList.add('on');
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1)); if(s&&s.id!=='conteudo'){mapa[s.id]=a;sio.observe(s)}});
+
+    var espera=false;
+    function rolar(){
+      espera=false; var y=window.scrollY||0;
+      R.classList.toggle('rolou',y>8);
+      clearTimeout(tv); if(pend.length) tv=setTimeout(varre,180);
+      if(y<160) links.forEach(function(a){a.classList.remove('on')});
+
+    }
+    window.addEventListener('scroll',function(){if(!espera){espera=true;requestAnimationFrame(rolar)}},{passive:true});
+    window.addEventListener('resize',rolar);
+    rolar();
+    /* números inteiros contam até o valor */
+    function inteiro(el,atraso){
+      var tn=el&&el.firstChild; if(!tn||tn.nodeType!==3) return;
+      var fim=tn.nodeValue, alvo=parseInt(fim,10); if(!(alvo>0)) return;
+      var o=new IntersectionObserver(function(es){
+        if(!es[0].isIntersecting) return; o.disconnect();
+        setTimeout(function(){var t0=null;(function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1300);
+          tn.nodeValue=p<1?String(Math.round(alvo*(1-Math.pow(1-p,3)))):fim; if(p<1) requestAnimationFrame(f);})(performance.now())},atraso||0);
+      },{threshold:.5});
+      o.observe(el);
+    }
+    inteiro(document.querySelector('.carimbo b'),1000);
+  }catch(err){R.classList.remove('anim')}
+})();
+</script>
+</body>
+</html>
